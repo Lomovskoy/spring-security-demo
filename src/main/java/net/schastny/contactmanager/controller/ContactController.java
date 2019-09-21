@@ -25,20 +25,21 @@ public class ContactController {
     }
 
     @ApiOperation("Получение всех контактов")
-    @GetMapping
+    @GetMapping("getAll")
     public List<Contact> getAllContract() {
         return contactService.getContacts();
     }
 
     @ApiOperation("Создане контакта")
-    @PostMapping
-    public Contact createAllContract(@ApiParam("Объект контакта без id") @RequestBody Contact contact) {
+    @PostMapping("createContract")
+    public Contact createContract(@ApiParam("Объект контакта без id") @RequestBody Contact contact) {
         return contactService.addContact(contact);
     }
 
     @ApiOperation("Удаление контакта")
-    @DeleteMapping
-    public void deleteAllContract(Integer id) {
+    @DeleteMapping("deleteContract")
+    public void deleteContract(Integer id) {
         contactService.deleteContact(id);
     }
+
 }

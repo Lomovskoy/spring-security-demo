@@ -44,7 +44,11 @@ public class Contact {
     @Column(name = "password")
     private String password;
 
+    @ApiModelProperty("роль")
+    @Column(name = "role")
+    private String role;
+
     @ApiModelProperty("создан")
     @Column(name = "created")
-    private LocalDateTime created;
+    private LocalDateTime created = LocalDateTime.now();
 }
