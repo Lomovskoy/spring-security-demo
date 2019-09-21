@@ -1,6 +1,6 @@
-CREATE TABLE CONTACTS
+CREATE TABLE CONTACT
 (
-    id        INT PRIMARY KEY,
+    id        SERIAL PRIMARY KEY,
     firstname VARCHAR(30),
     lastname  VARCHAR(30),
     telephone VARCHAR(15),

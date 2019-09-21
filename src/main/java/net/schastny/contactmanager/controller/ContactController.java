@@ -17,8 +17,12 @@ import java.util.List;
 @RequestMapping(path = "/contact/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class ContactController {
 
-    @Autowired
     private ContactService contactService;
+
+    @Autowired
+    public ContactController(ContactService contactService) {
+        this.contactService = contactService;
+    }
 
     @ApiOperation("Получение всех контактов")
     @GetMapping

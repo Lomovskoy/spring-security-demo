@@ -11,8 +11,12 @@ import java.util.List;
 @Service
 public class ContactServiceImpl implements ContactService {
 
-    @Autowired
     private ContactRepository contactRepository;
+
+    @Autowired
+    public ContactServiceImpl(ContactRepository contactRepository) {
+        this.contactRepository = contactRepository;
+    }
 
 
     @Override
